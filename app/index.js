@@ -62,7 +62,6 @@ const config = require('./config');
 
 config.init();
 
-const createMenu = require('./menu');
 const plugins = require('./plugins');
 const Session = require('./session');
 

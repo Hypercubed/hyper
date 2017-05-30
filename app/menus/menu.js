@@ -1,3 +1,5 @@
+const {getConfig} = require('../config');
+
 // menus
 const viewMenu = require('./menus/view');
 const shellMenu = require('./menus/shell');
@@ -7,10 +9,7 @@ const windowMenu = require('./menus/window');
 const helpMenu = require('./menus/help');
 const darwinMenu = require('./menus/darwin');
 
-const { getConfig } = require('../config');
-
 module.exports = (createWindow, updatePlugins) => {
-
   const shells = getConfig().shells || {};
   const shellKeys = Object.keys(shells);
 
@@ -63,7 +62,6 @@ module.exports = (createWindow, updatePlugins) => {
       ]
     });
   }
-
 
   const menu = [].concat(
     shellMenu(createWindow),
